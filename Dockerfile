@@ -10,7 +10,7 @@ RUN cd /usr/local/
 # RUN echo "JAVA_HOME=/usr/java/jdk1.8.0_161" >> /etc/profile
 # RUN echo "CLASSPATH=.:\$JAVA_HOME/lib:\$JAVA_HOME/lib/tools.jar" >> /etc/profile
 # RUN echo "PATH=\$PATH:\$JAVA_HOME/bin" >> /etc/profile
-RUN yum install java-1.8.0-openjdk
+RUN yum -y install java-1.8.0-openjdk
 RUN echo "JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk" >> /etc/profile
 RUN echo "CLASSPATH=.:\$JAVA_HOME/lib:\$JAVA_HOME/lib/tools.jar" >> /etc/profile
 RUN echo "PATH=\$PATH:\$JAVA_HOME/bin" >> /etc/profile
