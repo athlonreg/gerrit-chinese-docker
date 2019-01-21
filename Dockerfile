@@ -2,11 +2,11 @@ FROM centos:7.2.1511
 MAINTAINER zhanghl
 
 RUN yum -y install initscripts sudo git gitweb
-# ADD jdk-8u161-linux-x64.rpm /usr/local
+ADD jdk-8u161-linux-x64.rpm /usr/local
 ADD gerrit-2.16.3-1.noarch.rpm /usr/local
 ADD gerrit-2.16.3-1-Chinese-v8.war /usr/local
 RUN cd /usr/local/
-RUN rpm -ivh http://devops.iamzhl.top/file/jdk-8u161-linux-x64.rpm
+RUN rpm -ivh /usr/local/jdk-8u161-linux-x64.rpm
 RUN echo "JAVA_HOME=/usr/java/jdk1.8.0_161" >> /etc/profile
 RUN echo "CLASSPATH=.:\$JAVA_HOME/lib:\$JAVA_HOME/lib/tools.jar" >> /etc/profile
 RUN echo "PATH=\$PATH:\$JAVA_HOME/bin" >> /etc/profile
