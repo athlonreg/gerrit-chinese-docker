@@ -2,9 +2,9 @@ FROM centos:7.5.1804
 MAINTAINER zhanghl
 
 RUN yum -y install git gitweb
-ADD jdk-8u161-linux-x64.rpm /usr/local
+COPY jdk-8u161-linux-x64.rpm /usr/local
 # ADD gerrit-2.16.3-1.noarch.rpm /usr/local
-ADD gerrit-2.16.3-1-Chinese-v8.war /usr/local
+COPY gerrit-2.16.3-1-Chinese-v8.war /usr/local
 COPY review_site.tar.gz /usr/local
 RUN cd /usr/local && tar zxvf /usr/local/review_site.tar.gz
 RUN rpm -ivh /usr/local/jdk-8u161-linux-x64.rpm
