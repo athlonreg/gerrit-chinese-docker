@@ -7,7 +7,7 @@ Gerrit Docker For Chinese Language.
 
 # Run
 ```bash
-# docker -ti -p 8080:8080 -p 29418:29418 canvas1996/gerrit-2.16.3-chinese:latest
+# docker run -ti -p 8080:8080 -p 29418:29418 canvas1996/gerrit-2.16.3-chinese:latest
 ```
 
 # Port
