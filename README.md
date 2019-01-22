@@ -1,6 +1,5 @@
 # gerrit-chinese-docker
-Gerrit Docker for chinese.
-
+Gerrit Docker For Chinese Language.
 # Pull
 ```bash
 # docker pull canvas1996/gerrit-2.16.3-chinese:latest
