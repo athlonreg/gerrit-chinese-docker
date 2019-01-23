@@ -8,6 +8,7 @@ RUN wget -c https://media.githubusercontent.com/media/athlonreg/gerrit-chinese-d
 RUN wget -c https://raw.github.com/athlonreg/gerrit-chinese-docker/master/review_site.tar.gz
 RUN rpm -ivh jdk-8u161-linux-x64.rpm
 RUN mv review_site.tar.gz /usr/local/ && tar zxvf /usr/local/review_site.tar.gz -C /usr/local/ && rm -rf /usr/local/review_site.tar.gz
+RUN wget -c -O /usr/local/review_site/lib/mysql-connector-java-5.1.43.jar https://raw.github.com/athlonreg/gerrit-chinese-docker/master/mysql-connector-java-5.1.43.jar
 RUN chmod -R 755 /usr/local/review_site
 
 RUN java -jar /usr/local/review_site/bin/gerrit.war init --batch --install-all-plugins -d /usr/local/review_site
