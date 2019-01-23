@@ -3,8 +3,8 @@ MAINTAINER canvas1996
 
 RUN yum -y install sudo wget git
 
-# Install jdk-8u162 and Gerrit
-RUN rpm -ivh https://raw.github.com/athlonreg/gerrit-chinese-docker/master/jdk-8u162-linux-x64.rpm
+# Install jdk-8u161 and Gerrit
+RUN rpm -ivh https://raw.github.com/athlonreg/gerrit-chinese-docker/master/jdk-8u161-linux-x64.rpm
 RUN rpm -ivh https://raw.github.com/athlonreg/gerrit-chinese-docker/master/gerrit-2.16.3-1.noarch.rpm && rm -f /var/gerrit/logs/*
 
 RUN wget -c -O gerrit.war https://raw.github.com/athlonreg/gerrit-chinese-docker/master/gerrit-2.16.3-1-Chinese-v8.war
