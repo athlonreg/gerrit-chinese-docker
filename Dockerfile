@@ -11,7 +11,7 @@ RUN rpm -i https://gerritforge.com/gerritforge-repo-1-2.noarch.rpm
 RUN yum -y install java-1.8.0-openjdk
 RUN yum -y install gerrit-2.16.3  && rm -f /var/gerrit/logs/*
 
-RUN wget -c -O gerrit.war http://devops.iamzhl.top/gerrit/chinese/gerrit-2.16.3-1-Chinese-v8.war
+RUN wget -c -O gerrit.war https://raw.github.com/athlonreg/gerrit-chinese-docker/master/gerrit-2.16.3-1-Chinese-v8.war
 
 USER gerrit
 RUN java -jar gerrit.war init --batch --install-all-plugins -d /var/gerrit
